@@ -1,3 +1,4 @@
+USE test_schema;
 CREATE TABLE `hero` (
   `hero_id` int NOT NULL AUTO_INCREMENT,
   `firstname` varchar(45) NOT NULL,
