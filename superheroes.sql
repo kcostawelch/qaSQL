@@ -11,6 +11,7 @@ CREATE TABLE `hero` (
   KEY `teamid_idx` (`team_id`),
   CONSTRAINT `teamid` FOREIGN KEY (`team_id`) REFERENCES `team` (`team_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 CREATE TABLE `team` (
   `team_id` int NOT NULL AUTO_INCREMENT,
   `team_name` varchar(15) NOT NULL,
@@ -18,10 +19,12 @@ CREATE TABLE `team` (
   PRIMARY KEY (`team_id`),
   UNIQUE KEY `team_id_UNIQUE` (`team_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 INSERT into team (team_name, team_objective) values ('JLA','Protect the world'), 
 ('JSA','Defeat the Nazis'), ('Birds of Prey','Fight crime (without men)'), 
 ('Task Force X', 'Follow Wallers orders or die'), 
 ('Teen Titans', 'Teavh young superheroes to be their best');
+
 INSERT into hero (firstname,surname,alias,ability,team_id) values ('Bruce', 'Wayne', 'Batman', 'Martial Arts',1),
 ('Clark','Kent','Superman','Flight',1), ('Jay','Garrick','The Flash','Super-speed',2),
 ('Alan','Scott','Green Lantern','Ring Creation',2), ('Helena','Bertenelli','The Huntress','Crossbow Archery',3),
