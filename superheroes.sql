@@ -67,5 +67,5 @@ SELECT hero.hero_id,hero.firstname,hero.surname,hero.alias,hero.ability,hero.tea
 team.team_name,team.team_objective,hero.product_id,product.product_name,product.colour,
 product.std_cost,product.list_price,product.date_available
 FROM hero
-JOIN team ON hero.team_id=team.team_id
-JOIN product ON hero.product_id=product.product_id;
+INNER JOIN team ON hero.team_id=team.team_id
+INNER JOIN product ON hero.product_id=product.product_id;
